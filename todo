@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# This file is part of Todo.txt Helper.
+# Copyright (C) 2017 Ian Emnace
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+todo_modules_path="$(dirname "$BASH_SOURCE")/todo_modules"
+
+case $1 in
+  "add")
+    $todo_modules_path/add.sh "$2"
+    ;;
+  "ls")
+    $todo_modules_path/list.sh "$2"
+    ;;
+  "ctx")
+    $todo_modules_path/tags.sh "@"
+    ;;
+  "proj")
+    $todo_modules_path/tags.sh "+"
+    ;;
+  "done")
+    $todo_modules_path/done.sh "$2"
+    ;;
+  "help")
+    $todo_modules_path/help.sh "$2"
+    ;;
+  *)
+    $todo_modules_path/help.sh "$1"
+    ;;
+esac
