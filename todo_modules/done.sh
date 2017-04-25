@@ -22,7 +22,8 @@ if [[ $1 == "" ]]; then
   $todo_modules_path/list.sh
   read -p "id of done: " id
 elif [[ $1 == "--fzf" ]]; then
-  id="$(nl $HOME/todo.txt | grep -v "[0-9]\+\W\+x " | fzf | cut -f 1)"
+  # TODO: solve color hardcoding problem
+  id="$(nl -w1 -s": " $HOME/todo.txt | grep -v "[0-9]\+\W\+x " | FZF_DEFAULT_OPTS='--no-bold --color=fg:7,fg+:3,bg:-1,bg+:-1,hl:5,hl+:5,prompt:8,pointer:3,marker:2' fzf | cut -f 1 -d ":")"
 else
   id="$1"
 fi

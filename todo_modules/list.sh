@@ -24,5 +24,5 @@ else
   keyword="$1"
 fi
 
-nl $HOME/todo.txt | grep -v "[0-9]\+\W\+x " | grep --color "$keyword"
+nl -w1 -s": " $HOME/todo.txt | grep -v "[0-9]\+\W\+x " | grep --color "$keyword"
 exit 0
