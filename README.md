@@ -1,6 +1,23 @@
-# Todo.txt Helper
+# igemnace's Todo.txt Helper Scripts
 
-This project is a set of simple scripts to help manage your todo.txt.
+This project was a set of scripts I wrote to manage my todo.txt. It had been
+instrumental in my learning shell scripting, working with plain text on Unix,
+and even publishing open-source.
+
+However, I've outgrown what I've done here. There are gems of good practice, but
+there are a few bad practices littered around as well. I would fix them, but I
+also legitimately do not have a need for this anymore -- I use a different plain
+text solution for my notes and to-dos nowadays.
+
+I'm no longer actively maintaining this repo. If anything, I'll fix up the bad
+practices and attempt to document them, as a potential case study of
+implementing simple programs using simple Unix tools. If you *are* interested in
+learning, my online Bash resource of choice is [GreyCat's wiki](http://mywiki.wooledge.org/EnglishFrontPage).
+The [Guide] (http://mywiki.wooledge.org/BashGuide) and the [Pitfalls page](http://mywiki.wooledge.org/BashPitfalls)
+are particularly nice starting points.
+
+With that, you are free to use this project as you see fit, whether for
+learning, or perhaps usage. I defer to your good judgment. *Caveat emptor.*
 
 ## About Todo.txt
 
